@@ -1,3 +1,5 @@
 #!/usr/bin/env bash
 
-PlistBuddy -c "Set :CFBundleVersion $(Build.BuildNumber)" $APPCENTER_SOURCE_DIRECTORY/AutoLayout/AdvancedIOSUI/Info.plist
+echo "Setting CFBundleVersion to $APPCENTER_BUILD_ID..."
+
+PlistBuddy -c "Set :CFBundleVersion $APPCENTER_BUILD_ID" $APPCENTER_SOURCE_DIRECTORY/AutoLayout/AdvancedIOSUI/Info.plist
